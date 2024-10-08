@@ -15,10 +15,14 @@ const AddCategory = ({setcategories}) => {
  const submit=(e)=>{
    if(input.trim()> 1){
 
-   
-    e.preventDefault();
+     e.preventDefault();
     setcategories(categoria=>[...categoria,input])
-    } }
+    setinput('')
+    // llamamo a setinput para limpiar el input
+   } 
+   
+    }
+     
    
   
   
