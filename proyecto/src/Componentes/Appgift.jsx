@@ -6,9 +6,7 @@ const Appgift = () => {
     const [categoria, setcategoria]=useState(["naruto","pokemon"])
   
   
-  const addcategory= ()=>{
-    setcategoria(...categoria+"yugioh")
-  }
+ 
   
   
   // ...categoria agarra todo el array y le agrega yugioh
@@ -18,7 +16,7 @@ const Appgift = () => {
     <div>
 
 
-<button onClick={addcategory}>tocar</button>
+
 
 {categoria.map(category =>{
 
