@@ -9,6 +9,7 @@ const Appgift = () => {
  
  
 const addCategoria =(setcategories)=>{
+    if(categoria.includes(setcategories)) return;
     setcategoria([...categoria,setcategories])
 }
   
