@@ -1,6 +1,6 @@
 import  { useState } from 'react'
 
-const AddCategory = () => {
+const AddCategory = ({setcategories}) => {
   
   const [input,setinput]=useState("")
   
@@ -11,15 +11,21 @@ const AddCategory = () => {
    
 
  }
+//metodo para eliminar espacios
  const submit=(e)=>{
+   if(input.trim()> 1){
 
-    e.preventdefault();
-    console.log(e.target.value)
-  }
+   
+    e.preventDefault();
+    setcategories(categoria=>[...categoria,input])
+    } }
    
   
   
     return (
+        
+
+      
     <form onSubmit={submit} >
 
    <input type="text" 
@@ -30,6 +36,8 @@ const AddCategory = () => {
 
 
     </form>
+     
+    
   )
 }
 
