@@ -2,19 +2,21 @@ import React from 'react'
 import { useState } from 'react'
 import AddCategory from '../Componentes/AddCategory'
 
-const Appgift = ({setcategory}) => {
+const Appgift = () => {
     const [categoria, setcategoria]=useState(["naruto","pokemon"])
   
   
  
  
-  // ...categoria agarra todo el array y le agrega yugioh
+const addCategoria =(setcategories)=>{
+    setcategoria([...categoria,setcategories])
+}
   
   
     return (
     <div>
 
-<AddCategory setcategories={setcategoria} />
+<AddCategory setcategories={addCategoria} />
 
 
 {categoria.map(category =>{

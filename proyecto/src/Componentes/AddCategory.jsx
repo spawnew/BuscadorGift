@@ -16,7 +16,7 @@ const AddCategory = ({setcategories}) => {
    if(input.trim()> 1){
 
      e.preventDefault();
-    setcategories(categoria=>[...categoria,input])
+     setcategories(input.trim())
     setinput('')
     // llamamo a setinput para limpiar el input
    } 
