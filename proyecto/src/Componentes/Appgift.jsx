@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import AddCategory from '../Componentes/AddCategory';
 import { Gift } from './Gift';
-
+import '../Componentes/gif.css'
 
 const Appgift = () => {
   const [categoria, setCategoria] = useState([]);

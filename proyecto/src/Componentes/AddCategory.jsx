@@ -20,7 +20,7 @@ const AddCategory = ({ setcategories }) => {
     <form onSubmit={submit}>
       <input
         type="text"
-        placeholder="Coloque una categoría"
+        placeholder="Coloque el nombre para buscar"
         onChange={addCategoria}
         value={input}
       />
