@@ -1,0 +1,27 @@
+.gif h1 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .gif img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .gif:hover {
+    transform: scale(1.05); /* Aumenta el tamaño un poco cuando pasas el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  .container-gif{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Crea columnas de al menos 250px */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px;
+    justify-items: center; /* Centra los elementos en cada celda */
+
+
+  }

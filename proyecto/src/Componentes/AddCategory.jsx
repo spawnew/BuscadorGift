@@ -1,48 +1,31 @@
-import  { useState } from 'react'
+import { useState } from 'react';
 
-const AddCategory = ({setcategories}) => {
-  
-  const [input,setinput]=useState("")
-  
-  
- const addCategoria=(e)=>{
+const AddCategory = ({ setcategories }) => {
+  const [input, setInput] = useState('');
 
-   setinput(e.target.value)
-   
+  const addCategoria = (e) => {
+    setInput(e.target.value); 
+  };
 
- }
-//metodo para eliminar espacios
- const submit=(e)=>{
-   if(input.trim()> 1){
+  const submit = (e) => {
+    e.preventDefault(); 
 
-     e.preventDefault();
-     setcategories(input.trim())
-    setinput('')
-    // llamamo a setinput para limpiar el input
-   } 
-   
+    if (input.trim().length > 1) {
+      setcategories(input.trim()); 
+      setInput(''); 
     }
-     
-   
-  
-  
-    return (
-        
+  };
 
-      
-    <form onSubmit={submit} >
-
-   <input type="text" 
-   placeholder='coloque una categoria'
-   onChange={addCategoria}
-   value={input}
-   />
-
-
+  return (
+    <form onSubmit={submit}>
+      <input
+        type="text"
+        placeholder="Coloque una categoría"
+        onChange={addCategoria}
+        value={input}
+      />
     </form>
-     
-    
-  )
-}
+  );
+};
 
 export default AddCategory;

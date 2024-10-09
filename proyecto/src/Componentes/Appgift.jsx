@@ -1,36 +1,27 @@
-import React from 'react'
-import { useState } from 'react'
-import AddCategory from '../Componentes/AddCategory'
+import React, { useState } from 'react';
+import AddCategory from '../Componentes/AddCategory';
+import { Gift } from './Gift';
+
 
 const Appgift = () => {
-    const [categoria, setcategoria]=useState(["naruto","pokemon"])
-  
-  
- 
- 
-const addCategoria =(setcategories)=>{
-    if(categoria.includes(setcategories)) return;
-    setcategoria([...categoria,setcategories])
-}
-  
-  
-    return (
+  const [categoria, setCategoria] = useState([]);
+
+  const addCategoria = (newCategory) => {
+    if (categoria.includes(newCategory)) return; 
+
+    setCategoria([...categoria, newCategory]); 
+  };
+
+  return (
     <div>
+        <h1>Busque su gift </h1>
+      <AddCategory setcategories={addCategoria} />
 
-<AddCategory setcategories={addCategoria} />
-
-
-{categoria.map(category =>{
-
-    return <div><h1>{category}</h1>    </div>
-
-})
-
-}
-
-
+      {categoria.map((category) => (
+        <Gift categorias={category} key={category} />
+      ))}
     </div>
-  )
-}
+  );
+};
 
 export default Appgift;
